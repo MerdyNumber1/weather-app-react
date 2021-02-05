@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const settingsSlice = createSlice({
   name: 'settings',
   initialState: {
-    city: 'Bryansk',
+    city: 'Омск',
     metric: 'C'
   },
   reducers: {

@@ -7,20 +7,28 @@ const weatherSlice = createSlice({
     wind: {
       speed: 0,
       deg: 0,
+      direction: 'северный'
     },
     pressure: 0,
     humidity: 0,
-    precipitationChance: 0,
+    pop: 0,
   },
   reducers: {
     setWeather(state, action) {
-      console.log(action.payload)
+      const windDeg = action.payload.wind.deg
+
       return {
-        temperature: action.payload.main.temp,
-        wind: action.payload.wind,
+        temperature: action.payload.main.temp.toFixed(1),
+        wind: {
+          ...action.payload.wind,
+          direction: 315 < windDeg || windDeg < 45 ? 'южный' :
+                     45 < windDeg && windDeg < 135 ? 'западный' :
+                     135 < windDeg && windDeg < 225 ? 'северный' :
+                     225 < windDeg && windDeg < 315 && 'восточный'
+        },
         pressure: action.payload.main.pressure,
         humidity: action.payload.main.humidity,
-        precipitationChance: action.payload.snow
+        pop: action.payload.pop
       }
     },
   },
