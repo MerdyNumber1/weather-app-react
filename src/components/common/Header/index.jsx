@@ -1,5 +1,5 @@
 import Location from "components/Location";
-import ToggleDegree from "components/ToggleDegree";
+import ToggleMetrics from "components/ToggleMetrics";
 import ChangeLocation from "components/ChangeLocation";
 import styles from './Header.module.scss';
 
@@ -7,7 +7,7 @@ const Header = () => (
   <div className={styles.container}>
     <div className={styles.top}>
       <Location/>
-      <ToggleDegree />
+      <ToggleMetrics />
     </div>
     <ChangeLocation />
   </div>
