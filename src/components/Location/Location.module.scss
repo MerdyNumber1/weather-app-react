@@ -1,21 +1,7 @@
-.buttons {
-  margin-top: 9px;
-  margin-left: 3px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
+.city {
+  font-size: 50px;
 
-.button {
-  cursor: pointer;
-}
-
-.myLocation {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-left: 25px;
-}
-.myLocationLogo {
-  margin-right: 4px;
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
 }

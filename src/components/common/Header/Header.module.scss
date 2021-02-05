@@ -1,7 +1,16 @@
-.header {
+.container {
+  width: 100%;
+}
+
+.top {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  margin-top: 75px;
+
+  @media (max-width: 768px) {
+    margin-top: 19px;
+  }
 }

@@ -1,5 +1,4 @@
 import {useState} from 'react'
-import Text from "components/common/Text";
 import style from './ToggleDegree.module.scss';
 
 const ToggleDegree = () => {
@@ -7,7 +6,7 @@ const ToggleDegree = () => {
 
   return (
     <div className={style.toggleDegree}>
-      <Text opacity={0.4}>º</Text>
+      <p className={style.degree}>º</p>
       <div className={style.switch}>
         {['C', 'F'].map(type => (
           <div
@@ -15,7 +14,7 @@ const ToggleDegree = () => {
             className={`${style.switchItem} ${degreeType === type && style.switchItemActive}`}
             onClick={() => setDegreeType(type)}
           >
-            <Text opacity={degreeType === type ? 1 : 0.4}>{type}</Text>
+            <p style={{opacity: degreeType === type ? 1 : 0.4}}>{type}</p>
           </div>
         ))}
       </div>

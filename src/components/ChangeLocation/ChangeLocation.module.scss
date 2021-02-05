@@ -1,0 +1,33 @@
+.buttons {
+  margin-top: 5px;
+  margin-left: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  @media (max-width: 768px) {
+    margin-top: 12px;
+  }
+}
+
+.button {
+  cursor: pointer;
+}
+.buttonText {
+  opacity: 0.6;
+  display: inline;
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
+}
+
+.myLocation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 25px;
+}
+.myLocationLogo {
+  margin-right: 4px;
+}

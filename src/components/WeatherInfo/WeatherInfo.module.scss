@@ -2,6 +2,23 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 110px;
+
+  @media(max-width: 768px) {
+    margin-bottom: 40px;
+  }
+}
+
+.cellGroup {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+
+  @media(max-width: 768px) {
+    width: 100%;
+  }
 }

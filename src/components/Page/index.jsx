@@ -4,7 +4,7 @@ import WeatherInfo from "components/WeatherInfo";
 
 const MainPage = () => (
   <>
-    <Header/>
+    <Header />
     <Temperature />
     <WeatherInfo />
   </>

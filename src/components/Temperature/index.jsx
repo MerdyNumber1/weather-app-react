@@ -1,4 +1,3 @@
-import Text from "components/common/Text";
 import styles from './Temperature.module.scss';
 
 import CloudWeather from './sky/cloud.svg';
@@ -10,10 +9,10 @@ import SunWeather from './sky/sun.svg';
 const Temperature = () => (
   <div className={styles.container}>
     <div className={styles.temperature}>
-      <img src={SunWeather} alt=""/>
-      <Text size={180}>19º</Text>
+      <img className={styles.weatherLogo} src={SunWeather} alt=""/>
+      <p className={styles.degrees}>19º</p>
     </div>
-    <Text size={25}>Преимущественно солнечно</Text>
+    <p className={styles.temperatureStatus}>Преимущественно солнечно</p>
   </div>
 )
 

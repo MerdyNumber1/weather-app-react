@@ -12,3 +12,32 @@
 
   margin-bottom: 10px;
 }
+
+.degrees {
+  font-size: 180px;
+  color: white;
+  font-family: Lato, sans-serif;
+
+  @media (max-width: 768px) {
+    font-size: 120px;
+    font-weight: 300;
+  }
+}
+
+.temperatureStatus {
+  font-size: 25px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
+
+.weatherLogo {
+  width: 200px;
+
+  @media (max-width: 768px) {
+    width: 100px;
+  }
+}
