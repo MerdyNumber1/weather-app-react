@@ -1,5 +1,5 @@
 import weatherSlice from "./index";
-import settingsSlice from "../settings";
+import settingsSlice from "store/settings";
 
 const { setWeather } = weatherSlice.actions;
 const { changeCity } = settingsSlice.actions;

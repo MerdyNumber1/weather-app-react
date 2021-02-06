@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import {celToFah, fahToCel} from "../../utils";
+import { celToFah, fahToCel } from "utils";
 
 const weatherSlice = createSlice({
   name: 'weather',

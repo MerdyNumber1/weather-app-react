@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const settingsSlice = createSlice({
   name: 'settings',
   initialState: {
-    city: 'Челябинск',
+    city: 'Омск',
     metric: 'C',
     geolocation: {
       latitude: null,
