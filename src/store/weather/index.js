@@ -1,8 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
+import {celToFah, fahToCel} from "../../utils";
 
 const weatherSlice = createSlice({
   name: 'weather',
   initialState: {
+    description: '',
+    main: '',
     temperature: 0,
     wind: {
       speed: 0,
@@ -18,7 +21,9 @@ const weatherSlice = createSlice({
       const windDeg = action.payload.wind.deg
 
       return {
-        temperature: action.payload.main.temp.toFixed(1),
+        description: action.payload.weather[0].description,
+        main: action.payload.weather[0].main,
+        temperature: action.payload.main.temp,
         wind: {
           ...action.payload.wind,
           direction: 315 < windDeg || windDeg < 45 ? 'южный' :
@@ -28,9 +33,14 @@ const weatherSlice = createSlice({
         },
         pressure: action.payload.main.pressure,
         humidity: action.payload.main.humidity,
-        pop: action.payload.pop
+        pop: action.payload.pop * 100
       }
     },
+
+    convertTemperature(state, { payload: metric }) {
+      if(metric === 'C') state.temperature = fahToCel(state.temperature)
+      else if (metric === 'F') state.temperature = celToFah(state.temperature)
+    }
   },
 });
 

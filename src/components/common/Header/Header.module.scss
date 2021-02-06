@@ -8,7 +8,9 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
   margin-top: 75px;
+  position: relative;
 
   @media (max-width: 768px) {
     margin-top: 19px;

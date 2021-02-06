@@ -1,8 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import style from './ToggleMetric.module.scss';
-import settingsSlice from "store/settings";
-
-const { changeMetric } = settingsSlice.actions;
+import { changeMetric } from "store/settings/actions";
 
 const ToggleMetrics = () => {
   const metric = useSelector(state => state.settings.metric);

@@ -3,15 +3,22 @@ import { createSlice } from '@reduxjs/toolkit';
 const settingsSlice = createSlice({
   name: 'settings',
   initialState: {
-    city: 'Омск',
-    metric: 'C'
+    city: 'Челябинск',
+    metric: 'C',
+    geolocation: {
+      latitude: null,
+      longitude: null
+    }
   },
   reducers: {
     changeCity(state, action) {
       state.city = action.payload;
     },
-    changeMetric(state, action) {
+    setMetric(state, action) {
       state.metric = action.payload;
+    },
+    changeGeolocation(state, action) {
+      state.geolocation = action.payload;
     }
   },
 });
