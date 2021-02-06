@@ -13,8 +13,11 @@ const InputCity = ({ onCityChanging }) => {
   const onChangeCity = (e) => setCity(e.target.value)
 
   const onSubmitCity = () => {
-    dispatch(changeCity(city));
-    dispatch(getWeather());
+    if(city) {
+      dispatch(changeCity(city));
+      dispatch(getWeather());
+    }
+
     onCityChanging(false);
   }
 
@@ -24,7 +27,7 @@ const InputCity = ({ onCityChanging }) => {
       <button
         type="submit"
         onClick={onSubmitCity}
-        className={styles.submit}
+        className={`${styles.submit} ${!city && styles.submitDisabled}`}
       >OK</button>
     </form>
   )
